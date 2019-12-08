@@ -1,0 +1,20 @@
+﻿@model List<Student>
+@{ViewData["Title"] = "Searching";}
+
+<p>YOU SEARCHED FOR NAMES THAT STARTED WITH THE CHARACTER: <h1>@ViewData["CharacterSearched"]</h1></p><br />
+
+       <table>
+           <tr>
+               <th style="padding:0 15px 0 15px;">Name</th>
+               <th style="padding:0 15px 0 15px;">Age</th>
+               <th style="padding:0 15px 0 15px;">Hobby</th>
+           </tr>
+           @foreach (var item in Model)
+           {
+       <tr>
+           <td style="padding:0 15px 0 15px;">@item.Name</td>
+           <td style="padding:0 15px 0 15px;">@item.Age</td>
+           <td style="padding:0 15px 0 15px;">@item.Hobby</td>
+       </tr>
+           }
+       </table>
